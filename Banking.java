@@ -11,7 +11,7 @@ public class Banking {
         return balance;
     }
 
-    public double deposit(){
+    public void deposit(){
         if (amount > 0){
             balance += amount;
             System.out.println("You have successfully deposit");
@@ -20,7 +20,7 @@ public class Banking {
             System.out.println("You have enter invalid amount");
         }
     }
-    public double withdraw(){
+    public void withdraw(){
         if (amount > 0 && amount <= balance){
             balance -= amount;
             System.out.println("You have withdraw successfully");

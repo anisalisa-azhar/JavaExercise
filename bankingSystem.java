@@ -27,13 +27,14 @@ public class bankingSystem {
             case 2: 
             System.out.println("Please enter amount to deposit money ");
             double depositAmount = scanner.nextDouble();
-            bank.deposit(depositAmount);
+            
+            bank.deposit();
             System.out.println("You have added: RM " + depositAmount);
             break;
             case 3:
             System.out.println("Please enter amount to withdraw money ");
             double withdrawAmount = scanner.nextDouble();
-            bank.withdraw(withdrawAmount);
+            bank.withdraw();
             System.out.println("You have withdraw: RM " + withdrawAmount);
             case 4:
             running = false;
@@ -42,7 +43,7 @@ public class bankingSystem {
             default:
             System.out.println("Invalid option. Please choose again");
         }
-        scanner.close();
+       // scanner.close();
     }
 
     } 
