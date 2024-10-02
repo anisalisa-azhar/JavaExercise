@@ -21,21 +21,18 @@ public class bankingSystem {
         
         switch(choice){
             case 1:
-            System.out.println("\n Current balance: ");
-            bank.getBalance();
+            System.out.println("\n Current balance: RM" + bank.getBalance());
             break;
             case 2: 
             System.out.println("Please enter amount to deposit money ");
             double depositAmount = scanner.nextDouble();
-            
-            bank.deposit();
-            System.out.println("You have added: RM " + depositAmount);
+            bank.deposit(depositAmount);
             break;
             case 3:
             System.out.println("Please enter amount to withdraw money ");
             double withdrawAmount = scanner.nextDouble();
-            bank.withdraw();
-            System.out.println("You have withdraw: RM " + withdrawAmount);
+            bank.withdraw(withdrawAmount);
+            break;
             case 4:
             running = false;
             System.out.println("Exiting the system.");
@@ -43,7 +40,7 @@ public class bankingSystem {
             default:
             System.out.println("Invalid option. Please choose again");
         }
-       // scanner.close();
+       scanner.close();
     }
 
     } 
