@@ -5,6 +5,7 @@ class Vehicle {
     int year;
     double rentalPricePerDay;
 
+    //constructor
     public Vehicle (String make, String model, int year, double rentalPricePerDay){
         this.make = make;
         this.model = model;
